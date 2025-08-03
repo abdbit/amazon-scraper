@@ -54,6 +54,7 @@ func ExtractPhoneDetails(h *colly.HTMLElement) {
 	appendToFile("./iphones.csv", csvRow)
 }
 
+// copy this function to every project for appending to files
 func appendToFile(filename string, data string) {
 	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
 	if err != nil {
